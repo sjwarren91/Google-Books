@@ -1,17 +1,24 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Jumbotron from "./components/Jumbotron"
+import Jumbotron from "./components/Jumbotron";
+import Search from "./pages/Search";
 
 class App extends Component {
   render() {
     return (
-      <>
-        <Navbar />
-        <div className="content">
-        <Jumbotron />
-        </div>
-      </>
+      <Router>
+        <>
+          <div className="container">
+            <Navbar />
+            <Jumbotron />
+            <Switch>
+              <Route exact path="/" component={Search} />
+            </Switch>
+          </div>
+        </>
+      </Router>
     );
   }
 }

@@ -1,19 +1,19 @@
 import React from "react";
-import "./Navbar.css";
 
 function Navbar() {
   return (
-    <div className="header">
-      <div className="container">
-        <div className="logo">
-          <img src="./Google-Books.png" alt="Logo" />
-        </div>
-        <div className="links">
-          <a href="/">Search</a>
-          <a href="/">Saved</a>
-        </div>
-      </div>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a className="navbar-brand" href="#">Navbar</a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div className="navbar-nav">
+      <a className="nav-item nav-link active" href="#">Search<span className="sr-only">(current)</span></a>
+      <a className="nav-item nav-link" href="#">Saved</a>
     </div>
+  </div>
+</nav>
   );
 }
 
