@@ -30,7 +30,7 @@ function Book(props) {
             {props.state === "save" ? (
               <SaveBtn onClick={() => props.saveBook(props._id)} />
             ) : (
-              <DeleteBtn onClick={() => props.deleteBook(props.title)} />
+              <DeleteBtn onClick={() => props.deleteBook(props._id)} />
             )}
 
             <a role="button" href={props.link} target="_blank" className="btn btn-info" style={{ margin: 5 + "px" }}>
