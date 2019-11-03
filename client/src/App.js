@@ -4,8 +4,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
 class App extends Component {
+  
   render() {
     return (
       <Router>
@@ -15,6 +17,7 @@ class App extends Component {
             <Jumbotron />
             <Switch>
               <Route exact path="/" component={Search} />
+              <Route exact path="/saved" component={Saved} />
             </Switch>
           </div>
         </>

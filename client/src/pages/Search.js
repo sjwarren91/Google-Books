@@ -4,15 +4,6 @@ import Book from "../components/Book";
 
 class Search extends Component {
 
-  state = {
-    books: []
-  }
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-
-  } 
-
   render() {
     return (
       <React.Fragment>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SaveBtn from "./SaveBtn";
+import DeleteBtn from "./DeleteBtn";
 import "./Book.css";
 
 function Book(props) {
@@ -26,8 +27,15 @@ function Book(props) {
             )}
           </div>
           <div className="col-lg-2">
-            <SaveBtn onClick={() => props.saveBook(props._id)} />
-            <a role="button" href={props.link} target="_blank" className="btn btn-info" style={{margin: 5 + "px"}}>Link</a> 
+            {props.state === "save" ? (
+              <SaveBtn onClick={() => props.saveBook(props._id)} />
+            ) : (
+              <DeleteBtn onClick={() => props.deleteBook(props.title)} />
+            )}
+
+            <a role="button" href={props.link} target="_blank" className="btn btn-info" style={{ margin: 5 + "px" }}>
+              Link
+            </a>
           </div>
         </div>
         <div className="row">

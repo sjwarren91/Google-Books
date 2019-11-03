@@ -22,7 +22,8 @@ class SearchBar extends Component {
         .then(data => {
           console.log(data);
           this.setState({
-            books: data.data.items
+            books: data.data.items,
+            title: ""
           });
         })
         .catch(err => {
@@ -87,6 +88,7 @@ class SearchBar extends Component {
                 description={book.volumeInfo.description}
                 image={book.volumeInfo.imageLinks.thumbnail}
                 link={book.volumeInfo.infoLink}
+                state="save"
                 saveBook={this.saveBook}
               />
             ))
